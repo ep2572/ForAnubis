@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>For Anubis Interview: Evan Petersen</title>
+</head>
+
+<body>
+    <style>
+        table, td {
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        th {
+            background-color: teal;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+    <h1>File Database</h1>
+
+    <h3>Upload</h3>
+    <form action="/upload" enctype="multipart/form-data" method="POST">
+
+        <input type="file" id="upload" name="upload" /><br />
+        <label for="upload">Max filesize: 16 MB</label><br />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <h3>Stored Files</h3>
+    <table>
+        <th>File</th>
+        <th>Uploaded</th>
+        <th>Downloads</th>
+
+        {% for item in flist %}
+        <tr>
+            <td><a href="{{ url_for('.download', filename=item['name']) }}">{{item['name']}}</a></td>
+            <td>{{item['uploaded']}}</td>
+            <td>{{item['downloads']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
