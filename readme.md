@@ -9,7 +9,7 @@ implementation of the download function that might have proved useful if I could
 
 
 Most of the flask basics was taught through CS-UY 3083 Intro to Databases, with Professor Ratan Dey, but going along with the permissions given by the assignment I took
-  advantage of StackOverflow (among others) to develop an understanding of how to tackle the problem. Some of the data most notably the read and write conversions of 
+  advantage of StackOverflow (among others) to develop an understanding of how to tackle the problem. Most notably the read and write conversions of 
   the binary data, saving the data to a temporary folder before transfer, and the send_file method. I chose to leave in the attempted file deletion just to show a 
   little more of my thought process. If you want a list of pages I sourced from, just let me know.
   
